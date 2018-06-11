@@ -41,7 +41,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return Post::findOrFail($id);
+        return Post::with('comments')->findOrFail($id);
     }
 
     /**
